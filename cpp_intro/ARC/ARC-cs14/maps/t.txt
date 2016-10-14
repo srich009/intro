@@ -1,0 +1,12 @@
+Map is constructed over another data structure
+
+maps contain key, value pairs
+
+hashmap = O(1) 
+   fast access
+   no iterations
+
+treemap = O(logN)
+   slower access
+      can iterate through
+      

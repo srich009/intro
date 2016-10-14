@@ -1,0 +1,28 @@
+example
+
+
+#include <list>
+
+
+
+list<type> myList;  // type can be int, char, double
+
+list<type>::iterator it; // an iterator for a list of the type
+
+
+lists use iterators a type of encapsulated pointer
+
+.begin() == iterator to the first node of the list
+
+.end() == iterator to 1 past last node  (like null terminated char array)
+
+//-------------------------
+
+fill with a loop and push_back
+
+OR
+
+list<int> mylist = {1,2,3}; // c++11 style
+
+
+

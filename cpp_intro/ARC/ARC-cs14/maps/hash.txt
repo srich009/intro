@@ -1,0 +1,32 @@
+HASH TABLE
+
+//real hashes be around 512 bits
+//ex: md5, shaw1, sha512
+
+
+Hash Table: array of lists/trees
+
+make hash table size a prime number
+
+x = key
+
+hash function h(x) 
+   takes object and returns integer
+
+H(x) % size = index
+
+insert key at index
+
+
+if collisions
+
+   linear probe-- move from index by same step size each time
+      eg: move by 3 each time
+   
+   quadratic probe-- move from index + (number of tries looking )^2 each time
+      index + 1
+      index + 4
+      index + 9...
+      
+   chaining -- push back key onto list at the index
+   
