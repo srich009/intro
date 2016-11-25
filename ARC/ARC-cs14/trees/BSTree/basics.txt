@@ -1,0 +1,50 @@
+binary tree with N nodes 
+
+height = log(N) + 1
+
+max comparisons when search Olog(N)
+
+//----------------------------------------------------------
+
+//Recursive print function. 
+
+void Tree::print_(Node* n)  // IN ORDER
+{
+    if(n == 0)
+    {
+       return; 
+    }
+    
+    print_(n->left);
+    std::cout << n->val << ' ';
+    print_(n->right);
+    
+}
+
+void Tree::print_(Node* n)  // POST ORDER
+{
+    if(n == 0)
+    {
+       return; 
+    }
+    
+    print_(n->left);
+    print_(n->right);
+    std::cout << n->val << ' ';
+    
+}
+
+void Tree::print_(Node* n)  // PRE ORDER
+{
+    if(n == 0)
+    {
+       return; 
+    }
+    
+    std::cout << n->val << ' ';
+    print_(n->left);
+    print_(n->right);
+    
+}
+
+//-------------------------------------------
