@@ -1,0 +1,82 @@
+layout of classes:
+
+
+/////////////////////////////////////
+
+STRUCT (everything is public, can have functions in c++)
+
+struct Example
+{
+    //data members, etc...
+};
+
+/////////////////////////////////////
+
+class Example
+{
+    private:ss
+        //data members, functions
+    
+    public:
+        //data members, functions
+};
+
+/////////////////////////////////////
+
+private:    just members
+protected:  just derived && member
+public:     all access
+
+function implementation groups for classes
+
+//CONSTRUCTORS && DESTRUCTOR
+    -default constructor
+    -copy constructor
+    -assignment operator =
+    -destructor
+
+//ACCESSORS
+    -functions that dont change anything  
+    -ended with keyword "const"
+
+//MUTATORS
+    -functions that change some aspect...
+
+//OPERATORS
+    -explicitly overloaded operators
+    e.g. +, +=, ...
+
+//FRIENDS
+    -friended operators and functions
+    e.g 
+    ostream output operator <<
+    
+    
+
+derived classes/objects && polymorphism/inheritance
+
+dynamic allocation in heap
+BIG 3: copy const, assignment operator, and destructor
+
+
+derived class
+calls base class constructor first... (usual default unless specified)
+
+can put the constructor in field initilization list
+
+use virtual functions -> runtime polymorphism
+
+E.G: virtual  display function in base class 
+so you can build arr/vect of base class pointers to different derived objects.
+
+virtual functions of a base class must be implemented in the derived class
+
+if base class has pure virtual function not able to create objects of base class
+and need virtual destructor
+
+
+if pure virtual function in a class it becomes abstract base class
+   eg:  virtual void display() = 0;
+
+else normal virtual functions must be defined in each derived class
+

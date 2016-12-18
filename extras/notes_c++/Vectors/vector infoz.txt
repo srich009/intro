@@ -1,0 +1,33 @@
+vector<datatype> varName(#);
+^--------------^ ^-----^ ^
+   data type       name   num elements
+EX.
+
+vector<int> traffic(24);
+
+for(int i = 0; i < traffic.size(); ++i)
+{
+cout << "enter num cars for hour " << i << ",";
+cin >> traffic.at(i);
+cout<< endl;
+
+}
+
+
+g++ main.cpp
+
+./a.out < file.dat
+
+main.cpp is compiled as a.out
+
+changes it so that a.out uses the file for input instead
+could be .dat or .txt
+
+
+void display(vector<int> v) // vector of int display func
+{
+	for(int i = 0; i < v.size(); ++i)
+	{
+	cout << v.at(i) << " ";
+	}
+}

@@ -1,0 +1,60 @@
+Insert
+
+insert (itemtype item)
+{
+   leaf = leaf node to insert item (may be null or have 1 or 2 data items)
+   
+   if (leaf is null - only happens when root is null)  //PUBLIC INSERT
+   {
+      add new root to tree with item
+   }
+   else if (# data items in leaf = 1)                 //PRIVATE INSERT 2NODE
+   {
+      add item to node
+   }
+   else // leaf has 2 data items                      //PRIVATE INSERT 3NODE
+   {
+      split ( leaf, item )                            //SPLIT
+   }
+}
+
+// Item is to be inserted into n. The insertion
+// of item will cause n to have 3 items so n
+// must be split
+split ( Node *n, itemtype item, … // you may need more )
+{
+   if ( n is the root )
+   {
+      create a new node p
+   }
+   else
+   {
+      let p be the parent of n
+   }
+   
+   Replace node n with 2 nodes, n1 and n2, so that p is their parent
+   
+   Give n1 the item in n with the smallest value
+   Give n2 the item in n with the largest value
+   
+   if (n is not a leaf)
+   {
+      n1 becomes the parent of n’s two leftmost children
+      n2 becomes the parent of n’s two rightmost children
+   }
+      
+   x = the item in n that has the middle key value
+   
+   if ( adding x to p would cause p to have 3 items )
+   {
+      split (p, x)
+   }
+   else
+   {
+      add x to p
+   }
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+

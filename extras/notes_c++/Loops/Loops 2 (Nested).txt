@@ -1,0 +1,35 @@
+in nested loops like the example, 
+the variable inside of the nested loop resets each time that loop ends and the main loop runs again
+
+Example 1
+-------------------------------------------
+#include <iostream>
+using namespace std;
+int main()
+ {
+   int n = 3;
+   for (int i = 0; i <= n; ++i)
+   {
+      for (int j = 1; j <= i; j += 2)
+      {
+         cout << i << ' ' << j << ' ';
+      }
+   }
+   cout << endl;
+   return 0;
+}
+
+
+OUTPUT: "1 1 2 1 3 1 3 3 "
+for i=0
+for i=1  ^^^^
+for i=2      ^^^^
+for i=3		 ^^^^
+for i=3		     ^^^^
+
+
+when i = between 0-2
+the inner loop runs once each time
+on the i=3
+there is output twice
+the inner loop runs twice because 1 is <= 3 && also the second time 3 is <= 3

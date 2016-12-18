@@ -1,0 +1,20 @@
+/****
+
+merge sort...
+
+hidden base case if i >= k
+else recurse
+
+merge sort
+-split halfs
+-immmediately sort halfs
+-recurse sorting
+when begin == end range of 1 means sorted.
+goes back through && use merge helper
+----------
+merge helper funct.
+new vector put values in by comparing firts of each half
+then take smaller and increment that sides index
+
+
+***/

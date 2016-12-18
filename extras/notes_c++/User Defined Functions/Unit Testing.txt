@@ -1,0 +1,10 @@
+Unit testing is the process of individually testing a small part or unit of a program, typically a function.
+A unit test is typically conducted by creating a testbench, a.k.a. test harness, 
+which is a separate program whose sole purpose is to check that a function returns correct output values for a variety of input values.
+Each unique set of input values is known as a test vector.
+
+The language provides a compact way to print an error message when an expression evaluates to false. 
+assert() is a macro (similar to a function) that prints an error message and exits the program if assert()'s input expression is false. 
+The error message includes the current line number and the expression (a nifty trick enabled by using a macro rather than an actual function). 
+Using assert requires first including the <cassert> library
+

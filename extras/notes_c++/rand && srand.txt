@@ -1,0 +1,26 @@
+random numbers
+use the <cstdlib>
+=====================================================
+rand();
+// produces a random integer between 0 and RAND_MAX
+
+rand() %n;
+//produces a random integer value between 0 and n
+	e.g.
+	rand() % 6;  // the output is between 0,1,2,3,4,5
+
+rand() %n + m;
+//produces random number betweeen m and n
+	e.g.
+	rand() % 6 + 1;  // the output is between 1,2,3,4,5,6
+
+srand(num);
+// seeds rand() with integer
+// num should be a non-negative integer. A program that should behave identically on every run can use a constant seed
+
+
+srand (time (0));
+//A program whose behavior should change on each run itself needs a random number for the seed
+// srand seeds the rand ( ) list by using the local time on the computer. 
+// Since the time is measured in tiny fractions of seconds, the rand ( ) list appears to be random each time.
+// uses <ctime> library and <cstdlib> library

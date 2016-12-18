@@ -1,0 +1,45 @@
+single if statement
+
+
+if (Expression)
+{
+	// These commands run if expression true
+}
+// If the condition in parentheses is true, then the computer will run the commands between the { and the }
+-----------------------------------------------------------------------------------------------------
+if else statement
+
+// Statements that execute before the branches
+
+if (expression)
+{
+   // Statements to execute when the expression is true (first branch)
+}
+else
+{
+   // Statements to execute when the expression is false (second branch)
+}
+
+// Statements that execute after the branches
+----------------------------------------------------------------------------------------------------
+multibranch if else statement
+
+if (expr1)
+{
+
+}
+else if (expr2)
+{
+
+}
+
+...
+
+else if (exprN)
+{
+
+}
+else
+{
+
+}

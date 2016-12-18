@@ -1,0 +1,62 @@
+loops
+
+while - use when the number of iterations is not computable before entering the loop
+for- for counting, Use when the number of iterations is computable before entering the loop
+
+========================================================================
+WHILE
+
+while (variable and an expression )
+{
+	// Loop body: Sub-statements that execute if the 
+	// expression evaluated to true 
+	//This code repeats until the condition is no longer true
+}
+// Statements to execute after the expression evaluates to false
+
+// A while loop repeats what is between the { and the } until the condition is no longer true.
+
+	//loop Vairable counts the number of iterations of a loop, sometimes declared and initialized
+	// can use increment (++), decrement (--), or other expressions like i = i + 2
+	// Iterating N times using loop variable i
+	
+	i = 0; 
+	while (i <= N) 
+	{
+   		// Loop body statements
+   		++i;
+	}
+
+  (*Note_whileloops)
+  //Focus is placed on mastering basic looping using while loops, before introducing for loops.
+  //Also, looping N times is initially done using 1 to <= N rather than 0 to < N due to being more intuitive to new programmers and less prone to error,
+  //the latter being commonplace as a consequence of arrays being numbered starting at 0.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+FOR
+
+for (initialExpression; conditionExpression; updateExpression) 
+{
+  // Loop body: Sub-statements to execute if the
+  // conditionExpression evaluates to true
+}
+// Statements to execute after the expression evaluates to false
+
+	//A for loop statement collects three parts—the loop variable initialization, loop expression, and loop variable update 
+	// the 3 parts are separated by semicolons, and all are at the top of the loop
+
+	for (i = 0; i <= N; ++i) 
+	{
+	   // Loop body statements
+	}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+DO-WHILE
+
+do
+{
+//code to execute loop body
+}
+while(loop expression);
+
+//Versus a while loop, a do-while loop is useful when the loop should iterate at least once.
+// do-while is a loop construct that first executes the loop body's statements, then checks the loop condition.

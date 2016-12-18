@@ -1,0 +1,149 @@
+Strings
+A string is a sequence of characters in memory
+Each string character has a position number called an index.
+The numbering starts with 0
+
+//string member functions for access
+// examples use: 
+string userText;
+
+---------------------------------
+.at()
+
+userText.at(0);
+
+//accesses the character at a particular index of a string
+//in this case index 0
+-------------------------------------
+.length() OR .size()
+
+userText.length();
+userText.size();
+
+// returns numbers of characters in a string
+------------------------------------------------
+.empty()
+
+userText.empty();
+
+// returns true if length is 0
+-------------------------------------------
+.find(item)
+.find(item, index)
+
+// userText is "Help me!"
+userText.find('p');    // Returns 3 
+userText.find('e');    // Returns 1 (first occurrence of e only) 
+userText.find('z');    // Returns string::npos 
+userText.find("me");   // Returns 5
+userText.find('e', 2); // Returns 6 (starts at index 2)
+
+Returns index of first item occurrence, 
+else returns string::npos, which is a constant defined in the string library. 
+Item may be char, string variable, string literal or char array
+.find(item, indx) starts at index indx
+
+.rfind(item) //is the same as find but starts backwards
+
+------------------------------------------------------------------
+.substr(index, length)
+
+// userText is "http://google.com"
+userText.substr(0, 7);                     // Returns "http://"
+userText.substr(13, 4);                    // Returns ".com"
+userText.substr(userText.length() - 4, 4); // Last 4: ".com"
+
+//Returns substring starting at index and having lenghth characters.
+-------------------------------------------------------------------------------
+.push_back(newChar)
+
+// userText is "Hello"
+userText.push_back('?'); // Now "Hello?" 
+
+//appends newChar to the end of string
+---------------------------------------------------------------------------------
+.append(moreString)
+
+// userText is "Hi"
+userText.append(" friend"); // Now "Hi friend"
+
+//Appends a copy of string moreString
+------------------------------------------------------------------------------
+.insert(index, substring)
+
+// userText is "Goodbye"
+userText.insert(0, "Well "); // Now "Well Goodbye" 
+// userText is "Goodbye"
+userText.insert(4, "---");   // Now "Good---bye"
+
+//Inserts string subStr starting at index indx.
+---------------------------------------------------------------------
+.replace(index, number, substring)
+
+// userText is "You have many gifts"
+userText.replace(9, 4, "a plethora of"); 
+// Now "You have a plethora of gifts"
+
+//Replaces characters at indices indx to indx+num with a copy of subStr
+------------------------------------------------------------------------
+.clear()
+
+// userText is "Help me!"
+userText.clear(); // Clears string 
+userText.size();  // Returns 0 
+
+//Deletes characters, sets size to 0
+------------------------------------------------------------------------
+.resize(number)
+
+// userText is "Help me!"
+userText.resize(4); // Now "Help" 
+userText.size();    // Returns 4
+
+//Resize string to have num characters. 
+//If decrease, drops extra chars. 
+//If increase, sets new chars to null ('\0', ASCII value 0)
+===================================================================================
+===================================================================================
+Characters
+can be used via #include <cctype> provides access to several functions for working with characters.
+===============================================================================================
+isalpha(c)
+
+isalpha('x') // true
+isalpha('6') // false
+isalpha('!') // false
+
+//true if alphabetic: a-z or A-Z
+================================================================================================
+isdigit(c)
+
+isdigit('x') // false
+isdigit('6') // true
+
+//true if digit: 0-9
+==================================================================================================
+isspace(c)
+
+isspace(' ')  // true
+isspace('\n') // true
+isspace('x')  // false
+
+//true if whitespace
+==============================================================================================
+toupper(c)
+
+toupper('a')  // A
+toupper('A')  // A
+toupper('3')  // 3
+
+//Uppercase version, non-letters go out same
+=============================================================================================
+tolower(c)
+
+tolower('A')  // a
+tolower('a')  // a
+tolower('3')  // 3
+
+//Lowercase version, non-letters go out same
+============================================================================================

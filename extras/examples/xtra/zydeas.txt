@@ -1,0 +1,70 @@
+/*
+
+int main(int argc, char** argv)
+{
+    cout << argv[0] << endl;
+}
+
+argv[0] // file name
+
+;
+
+p[i] == *(p + i)
+i  = width
+
+*/
+
+//-----------------------------------------------
+
+
+
+/*
+
+using climits library
+
+unsigned search(const vector<int> &v, int val)
+{
+    if(v.empty())
+    {
+        return UINT_MAX;
+    }
+    return search(v, val, 0, v.size()-1);
+}
+
+
+///helper search recurse
+unsigned search(const vector<int> &v, int val, unsigned begin, unsigned end)
+{
+     unsigned mid = (begin + end) / 2;
+
+    if(begin >= end)
+    {
+        if(v.at(mid) == val)
+        {
+        return mid;
+        }
+        else
+        {
+        return UINT_MAX;
+        }
+    }
+    
+   
+    if(v.at(mid) == val)
+    {
+        return mid;
+    }
+    if(v.at(mid) > val)
+    {
+        return search(v, val, begin, mid-1);
+    }
+    
+    //to the right if v.at(mid) < val
+    
+    return search(v, val, mid+1, end);
+    
+}
+
+*/
+
+//--------------------------------------------

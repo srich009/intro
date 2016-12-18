@@ -1,0 +1,30 @@
+
+/*
+//linked list
+
+//make private display function also
+
+void IntList::display() const
+{
+    if(head == 0)
+    {
+        return;
+    }
+    cout << head->data; // move below function call to reverse
+    display(head->next);
+        
+    
+}
+
+void IntList::display(IntNode* curr) const
+{
+    if(curr == 0)
+    {
+        return;
+    }
+    cout << ' ' << curr->data; // move below function call to reverse
+    display(curr->next);
+}
+
+*/
+

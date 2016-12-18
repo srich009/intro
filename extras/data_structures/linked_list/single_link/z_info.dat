@@ -1,0 +1,12 @@
+singly linked list (storage of integers)
+
+base class: IntList
+-list of nodes 
+-pointer to head 
+-pointer to tail
+
+derived class: SortedSet
+-constructor sorts and removes duplicates
+-inheritance of all IntList functions
+-overides some IntList functions && includes some new functions
+

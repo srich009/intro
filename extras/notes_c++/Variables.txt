@@ -1,0 +1,45 @@
+The left side of an assignment statement must be a variable, not an expression.
+
+
+int variableName;
+// Declares an int variable
+
+int variableName = 0;
+// Creates an int variable, initializes it, stores a number in it.
+-----------------------------------------------------------------------------
+float variableName;
+// Declares a float variable
+
+float variableName = 0.0;
+// Creates a floating point variable, initializes it, stores a number in it.
+------------------------------------------------------------------------------
+double variableName;
+// declares a double floating point variable
+
+double variableName = 0.0;
+// Creates a double floating point variable, initializes it, stores a number in it.
+----------------------------------------------------------------------------------------
+string someWord;
+// Creates a string variable
+
+string someWord = "letters"
+// Creates a string variable and initializes it
+------------------------------------------------------------------------------------
+char userKey;
+// Creates a char variable
+
+char userKey = 'x';
+// Creates a char variable and initializes it
+----------------------------------------------------------------------------
+bool isThing = false;
+// declare and initilize bool vairable
+//true and false are values
+//true = 1 and false = 0
+------------------------------------------------------------
+static_cast<type>(userVariable);
+// Type convesrions
+// casts a variable of one kind to anther listed in <>
+-----------------------------------------------------------------------
+const type NAME_OF_VARIABLE = value;
+//constant variable will not change & can be called for same value again
+// e.g.   const double START_VALUE = 5.0;

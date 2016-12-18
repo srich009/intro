@@ -1,0 +1,76 @@
+Delete
+
+deleteItem (itemtype item)
+{
+   node = node where item exists (may be null if no item)
+   
+   if (node)
+   {
+      if (item is not in a leaf)
+      {
+         swap item with inorder successor (always leaf)
+         leafNode = new location of item to delete
+      }
+      else
+      {
+         leafNode = node
+      }
+      
+      delete item from leafNode
+      
+      if (leafNode now contains no items)
+      {
+         fix (leafNode)
+      }
+   }
+}
+
+// completes the deletion when node n is empty by either
+// removing the root, redistributing values, or merging nodes.
+// Note: if n is internal, it has only one child
+fix (Node* n, …) //may need more parameters 
+{
+   if (n is the root) 
+   {
+      remove the root
+      set new root pointer
+   }
+   else 
+   {
+      Let p be the parent of n
+      
+      if ( some sibling of n has two items ) 
+      {
+         Distribute items appropriately among n, the
+         sibling and the parent (remember take from right first)
+         
+         
+         if ( n is internal ) 
+         {
+            Move the appropriate child from n’s sibling
+            (May have to move many children if
+            distributing across multiple siblings)
+         }
+      }
+      else //merge nodes
+      { 
+         Choose an adjacent sibling s of n 
+         (remember, merge left first)
+         Bring the appropriate item down from p into s
+         
+         if ( n is internal )
+         {
+            move n’s child to s
+         }
+         
+         Remove node n
+         
+         if ( p is now empty )
+         {
+            fix (p)
+         }
+            
+      } //end if
+      
+   }//end if
+}

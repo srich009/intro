@@ -1,0 +1,111 @@
+A function is a named list of statements. 
+A function's block of statements may include branches, loops, and other statements.
+Invoking a function's name, known as a function call, causes the function's statements to execute.
+user defined functions are writen before main(). they can use built in variables and "anything" included in a library.
+A program must define a main() function, which is automatically called first when a program executes
+user defined functions can be called inside of the main() function
+
+example:
+
+#include <iostream>
+using namespace std;
+
+void FunctionName() 
+{ 
+  //variables
+  char x = '*';
+
+  // Code for function
+  cout << x;
+
+   return;
+}
+
+int main() 
+{
+   FunctionName();
+
+   return 0;
+}
+
+------------------------------------------------------------------------------------------------------
+PARAMETERS
+
+Programmers can influence a function's behavior via an input to the function known as a parameter. 
+For example, a face-printing function might have an input that indicates the character to print when printing the face.
+
+#include <iostream>
+using namespace std;
+
+void PrintFace(char faceChar) {
+
+   cout << "   "  << faceChar << " " << faceChar << endl;      // Eyes
+   cout << "    " << faceChar << endl;                         // Nose
+   cout << "   "  << faceChar << faceChar << faceChar << endl; // Mouth
+
+   return;
+}
+
+int main() {
+
+   PrintFace('o');
+   return 0;
+}
+
+
+The code void PrintFace(char faceChar) indicates that the function has a parameter of type char named faceChar.
+The function call PrintFace('o') passes the value 'o' to that parameter. The value passed to a parameter is known as an argument.
+An argument is an expression such as: 99, numCars, or numCars + 99.
+In contrast to an argument being an expression, a parameter is like a variable definition. Parameters are not expressions. 
+Upon a call, the parameter's memory location is allocated, and the argument's value is assigned to the parameter. Upon a return, the parameter is deleted from memory.
+
+A function may have multiple parameters, which are separated by commas. 
+A function definition with no parameters must still have the parentheses.
+Argument values are assigned to parameters by position: First argument to the first parameter, second to the second, etc.
+E.G.
+ 
+void CalcVal(int a, int b, int c) {....}
+main(){ 
+CalcVal(42, 55, 77);
+.......
+}
+
+---------------------------------------------------------------------------------------------------------------------------------
+RETURN
+
+A function is commonly defined to compute a mathematical function involving several numerical parameters and returning a numerical result.
+A function may return a value using a return statement.
+Each function call creates a new set of local variables, forming part of what is known as a stack frame. A return causes those local variables to be discarded.
+E.G.
+
+#include <iostream>
+using namespace std;
+
+int ComputeSquare(int numToSquare) 
+{
+   return numToSquare * numToSquare;
+}
+
+int main() {
+   int numSquared = 0;
+   int userVal = 0;
+   cout << "enter num to square: ";
+   cin >> userval;
+   numSquared = ComputeSquare(userVal);
+   cout << userVal << " squared is " << numSquared << endl;
+
+   return 0;
+}
+
+numSquared is assigned the return value of ComputeSquare(userVal). which is 49
+The ComputeSquare function is defined to have a return type of int. So the function's return statement must also have an expression that evaluates to an int.
+
+Other return types are allowed, such as char, double, etc. A function can only return one item, not two or more. 
+A return type of void indicates that a function does not return any value, in which case the return statement should simply be: return;
+A return statement may appear as any statement in a function, not just as the last statement. Also, multiple return statements may exist in a function.
+
+A function evaluates to its returned value. Thus, a function call often appears within an expression. 
+For example, 5 + ComputeSquare(4) would become 5 + 16, or 21. A function with a void return type cannot be used as such within an expression. 
+
+A function's statements may include function calls, known as hierarchical function calls or nested function calls . 
+Note that main() itself is a function, being the first function called when a program begins executing, and note that main() calls other functions

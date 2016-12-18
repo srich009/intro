@@ -1,0 +1,61 @@
+// Includes a library
+#include <library_to_include>
+	ex: 
+	<iostream>  // related to input & output, cout and cin are functions from iostream class, in std namespace.
+	<string>  // related to string variables, words, etc...
+	<cmath>   // higher level math functions
+	<cstdlib>   // Enables use of rand() and other...
+	<ctime>  // functions of time
+	<cctype> // functions for working with characters (supported library from C)
+	<cassert> // enables unit testing of functions with the assert macro
+	<algorithm> // 
+	
+----------------------------------------------------------------------------------------------------------
+// namespace usage
+using namespace std;  
+   // allows things to be grouped in a standard way so every function doesnt need to be specified each time
+   /* not always used
+	programs can have more than one namespace then things should be specified using a scope operator "::"
+	Ex1:
+
+	//using "using namespace std"
+	#include <iostream>
+	using namespace std;
+
+	cout<<"something"<<endl;
+	cin>>var;
+
+	//same example without "using namespace std"
+	#include <iostream>
+
+	std::cout<<"something"<<endl;
+	std::cin>>var;
+	
+	ex2:
+
+	namespace myNamespace
+	{   
+	   int a, b;
+	}
+
+	myNamespace::a
+	myNamespace::b
+
+   */
+
+-------------------------------------------------------------------------------
+// Prints text to the screen
+cout << "This will appear on the screen" << endl;
+// Prints a variable to the screen
+cout << variablePrinted << endl; 
+
+------------------------------------------------------------------------------
+
+// Gets input from the user and stores it in the Variable named
+// cin only inputs one word, it stops at the first space.
+cin >> userVariable;
+
+// getline can be used to enter a string of multiple words at once
+// use with the string library enabled
+getline(cin, string_name);
+
