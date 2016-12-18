@@ -11,7 +11,8 @@ CS12 - Intro to Programming in C++ II
 
 CS14 - Programming in C++ with Data Structures 
 
-extras - random stuff like: notes, example code, and attempts to fix old labs/programs
+extras - mostly a collection of small parts. took all the best stuff into a folder.
+        random stuff like: notes, example code, and attempts to fix old labs/programs
         the data structures part probably contains redundant code...
 
 P.S.
