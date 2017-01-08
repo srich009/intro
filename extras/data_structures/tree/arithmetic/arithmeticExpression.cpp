@@ -98,28 +98,22 @@ string arithmeticExpression::infix_to_postfix()
      {
          return;
      }
-    //if ((n->left != 0 && n != root->left) || n == root)
+
     if(n->data == '+' || n->data == '-' || n->data == '/' || n->data == '*')
     {
-        //if(n->left->left == 0 && n->left->right == 0)
-        {
-            cout << '(';
-        }
+        cout << '(';
     }
+    
     infix(n->left);
-
     cout << n->data;
-
     infix(n->right);
+    
     if(n->data == '+' || n->data == '-' || n->data == '/' || n->data == '*')
-    //if((n->right != 0 && n != root->right) || n == root)
     {
-        //if(n->right->left == 0 && n->right->right == 0)
-        {
-            cout << ')';
-        }
+        cout << ')';
     }
  }
+//-----------------------------------------------------------
 
  /* Helper function that outputs the prefix notation of the arithmetic expression tree
     by performing the preorder traversal of the tree. */
@@ -134,6 +128,7 @@ string arithmeticExpression::infix_to_postfix()
     prefix(n->left);
     prefix(n->right);
  }
+//-----------------------------------------------------------
 
  /* Helper function that outputs the postfix notation of the arithmetic expression tree
     by performing the postorder traversal of the tree. */
@@ -148,6 +143,7 @@ string arithmeticExpression::infix_to_postfix()
     postfix(n->right);
     cout << n->data;
  }
+//-----------------------------------------------------------
  
  int arithmeticExpression::height(TreeNode *n)
  {
@@ -156,6 +152,7 @@ string arithmeticExpression::infix_to_postfix()
      int y = height(n->right);
      return ((x > y) ? x : y) + 1;
  }
+//-----------------------------------------------------------
  
  /* Helper function for generating the dotty file. This is a recursive function. */
  void arithmeticExpression::visualizeTree(ofstream &out, TreeNode *n)
@@ -188,10 +185,12 @@ string arithmeticExpression::infix_to_postfix()
  arithmeticExpression::arithmeticExpression(const string &str)
     : infixExpression(str), root(0)
  {}
+//-----------------------------------------------------------
 
  /* Implementation of destrucor is optional.
     The destructor should deallocate all the nodes in the tree. */
  //arithmeticExpression::~arithmeticExpression();
+//-----------------------------------------------------------
 
  /* Converts the infixExpression to its equivalent postfix string
     and then generates the tree and assigns the root node to the 
@@ -230,6 +229,7 @@ string arithmeticExpression::infix_to_postfix()
     root = cstack.top();
     return;
  }
+//-----------------------------------------------------------
  
  void arithmeticExpression::visualizeTree(const string &outputFilename)
  {
@@ -247,4 +247,5 @@ string arithmeticExpression::infix_to_postfix()
     string command = "dot -Tjpg " + outputFilename + " -o " + jpgFilename;
     system(command.c_str());
 }
+//-----------------------------------------------------------
 
